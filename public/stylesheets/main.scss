@@ -1,0 +1,190 @@
+
+/* Define standard variables and values for website */
+$primary: #393268;
+$secondary: #A993D8;
+$textcolor:white;
+$textbody: #424242;
+$otherfont: 'Quicksand';
+$headings-font-family: 'Lato';
+$headings-font-style:   sans-serif;
+$headings-font-weight:  bold;
+$headings-line-height:  1.2;
+$headings-color: #393268;
+// $btnWidth: 250px;
+
+
+// Required
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Quicksand&display=swap');
+
+
+   /* Use the variables */
+  @mixin flexCenter{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  } 
+   
+   html,
+   body {
+   height: 100%;
+   background-color: $textcolor;
+   }
+
+   .flexCenter{
+    @include flexCenter();
+    background-color: $textcolor;
+   }
+
+   a{
+    text-decoration: none!important;
+    color:$secondary;
+    &:hover{
+      text-decoration: underline!important;
+      color:$primary;
+    }
+    &:active{
+      text-decoration: underline!important;
+      color:$primary;
+    }
+  }
+
+    h1{
+    font-family: $headings-font-family;
+    font-style: $headings-font-style;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
+    }
+
+    p, label, .sr-only{
+      font-family: $otherfont;
+      font-style: $headings-font-style;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+      color: $textbody;
+    }
+
+    .text-center{
+      background-color: $textcolor;
+      justify-content: center;
+      align-items:center;
+    }
+
+    
+    .nav-item{
+      width:fit-content;
+      vertical-align: middle;
+      align-items: center;
+
+      small{
+        font-family: $otherfont;
+        text-align: center;
+      }
+      .nav-link{
+        vertical-align: middle;
+        align-items: center;
+      }
+      
+    }
+
+    .img-fluid{
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    .btn-primary{
+      // min-width: $btnWidth;
+      margin: 1em;
+      border: 0;
+      background:$secondary;
+      color: $textcolor;
+      letter-spacing: 1px;
+      cursor: pointer;
+      font-family: $otherfont;
+      }
+
+    .btn-block{
+      border: 0;
+      background:$secondary;
+      color: $textcolor;
+      cursor: pointer;
+      font-family: $otherfont;
+      }
+
+    
+    .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    }
+    .form-signin .checkbox {
+    font-weight: 400;
+    }
+    .form-signin{
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    font-family: $otherfont;
+    background: $textcolor;
+    border-color: $primary;
+    color: $secondary;
+    }
+
+    .form-control .form-control-file{
+      max-width: 300px;
+    }
+
+    .form-signin .form-control:focus {
+    z-index: 2;
+    }
+    .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+    .form-signin input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    }
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+   
+
+      .bi{
+        width: 2em;
+        color: $secondary;
+
+        &:hover{
+          color: $primary;
+          }
+        &:visited{
+          color: $primary;
+        }
+      }
+
+      .card-img{
+       padding:10px;
+      }
+
+
+    
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
