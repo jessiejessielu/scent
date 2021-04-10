@@ -14,6 +14,7 @@ const { EWOULDBLOCK } = require('constants');
 //const MongoStore = require("connect-mongo")(session);
 var MongoDBStore = require('connect-mongodb-session')(session);
 
+var PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -27,7 +28,7 @@ MongoClient.connect(url, (err, client) => { //this is localhost connection strin
   db = client.db('scent'); //Sets the database to work with
 
   //starts a server
-  app.listen(3000, () => {
+  app.listen(PORT, () => {
     console.log('listening on port 3000')
   })
 })
