@@ -236,7 +236,7 @@ app.post('/upload', async(req, res, next) => {
         	url: "https://api.luxand.cloud/photo/emotions",
         	qs: {},
         	headers: {
-        		'token': "3f0af461941045cda54bb9741e2c5569"
+        		'token': "83cfc4b743a447228c23e1d3b35d745a"
         	},
         	formData: {
         		photo: fs.createReadStream(savePath)
@@ -307,7 +307,7 @@ app.post('/multiple', async (req, res, next) => {
                     url: "https://api.luxand.cloud/photo/emotions",
                     qs: {},
                     headers: {
-                        'token': "3f0af461941045cda54bb9741e2c5569"
+                        'token': "83cfc4b743a447228c23e1d3b35d745a"
                     },
                     formData: {
                         photo: fs.createReadStream(filePath)
